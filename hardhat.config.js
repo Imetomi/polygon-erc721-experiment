@@ -1,5 +1,6 @@
 require("@nomiclabs/hardhat-ethers");
 require('@openzeppelin/hardhat-upgrades');
+require("@nomiclabs/hardhat-etherscan");
 
 const fs = require('fs');
 const privateKey = fs.readFileSync(".secret").toString().trim();
@@ -23,4 +24,9 @@ module.exports = {
       }
     }
   },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: "872BQ43VBSU8JX4Y2AW2JTMJ2HH4BZZUVX"
+  }
 }
